@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght=700;800&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght=700;800&family=Work+Sans:wght=400;500;600&display=swap" rel="stylesheet">
     <meta name="description" content="">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="script.js" defer></script>
@@ -84,13 +84,50 @@
 
 <aside id="modal" class="modal" style="display: none;" aria-hidden="true" role="dialog">
     <div class="modal-wrapper">
+        <button class="modal-back" style="display: none;" aria-label="Retour à la galerie">&larr;</button>
         <button class="modal-close" aria-label="Fermer la fenêtre">&times;</button>
+
         <div id="modal-gallery-view">
             <h3>Galerie photo</h3>
             <div class="modal-gallery"></div>
             <hr class="modal-separator">
             <button class="btn-add-photo">Ajouter une photo</button>
         </div>
+
+        <div id="modal-add-photo-view" style="display: none;">
+            <h3>Ajout photo</h3>
+            <form id="form-add-photo">
+                
+                <div class="upload-container">
+                    <div id="image-preview-container">
+                        <span class="upload-icon" style="font-size: 56px; color: #B9C5CC; margin-bottom: 10px;">&#128443;</span>
+                        <label for="file-upload" class="label-file">+ Ajouter photo</label>
+                        <input id="file-upload" type="file" accept="image/png, image/jpeg" required />
+                        <p>jpg, png : 4mo max</p>
+                    </div>
+                    <img id="image-preview" src="#" alt="Aperçu de l'image insérée" style="display: none;">
+                </div>
+
+                <div class="input-group">
+                    <label for="photo-title">Titre</label>
+                    <input type="text" id="photo-title" name="title" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="photo-category">Catégorie</label>
+                    <select id="photo-category" name="category" required>
+                        <option value=""></option>
+                        <option value="1">Objets</option>
+                        <option value="2">Appartements</option>
+                        <option value="3">Hotels & restaurants</option>
+                    </select>
+                </div>
+
+                <hr class="modal-separator">
+                <input type="submit" id="btn-validate" value="Valider" disabled>
+            </form>
+        </div>
+
     </div>
 </aside>
 

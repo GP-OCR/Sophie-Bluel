@@ -349,3 +349,104 @@ footer nav ul {
     text-align: center;
     font-size: 14px;
 }
+
+/* Navigation interne modale */
+.modal-back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Zone d'upload photo */
+.upload-container {
+    background-color: #E8F1F6;
+    border-radius: 3px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#image-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-icon {
+    font-size: 60px;
+    color: #B9C5CC;
+    margin-bottom: 10px;
+}
+
+.label-file {
+    background-color: #CBD6DC;
+    color: #306685;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#file-upload {
+    display: none;
+}
+
+.upload-container p {
+    font-size: 10px;
+    color: #444444;
+}
+
+#image-preview {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Formulaire d'ajout */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group input, .input-group select {
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    padding: 0 15px;
+}
+
+/* Bouton Valider */
+#btn-validate {
+    font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #A7A7A7; /* Gris par défaut */
+    border: none;
+    border-radius: 60px;
+    width: 237px;
+    height: 36px;
+    margin: 0 auto;
+    display: block;
+    cursor: not-allowed;
+}
+
+#btn-validate.active {
+    background-color: #1D6154; /* Vert quand actif */
+    cursor: pointer;
+}
