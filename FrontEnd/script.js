@@ -117,17 +117,18 @@ function showAddPhotoView() {
 function openModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "flex";
-    modal.setAttribute("aria-hidden", "false");
     showGalleryView();
     displayModalGallery(allWorks);
+    document.querySelector(".modal-close").focus();
 }
 
 function closeModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
     resetForm();
     showGalleryView();
+    const editBtn = document.getElementById("edit-btn");
+    if (editBtn) editBtn.focus();
 }
 
 function setupModalNavigation() {

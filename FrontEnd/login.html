@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="login.js" defer></script>
-</head> 
+</head>
 <body>
 <header>
     <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-    <nav>
+    <nav aria-label="Menu principal">
         <ul>
             <li><a href="index.html">projets</a></li>
             <li><a href="index.html#contact">contact</a></li>
@@ -26,22 +26,22 @@
 <main>
     <section id="login">
         <h2>Log In</h2>
-        <p id="error-message" style="color: red; text-align: center; margin-bottom: 20px; display: none;">Erreur dans l’identifiant ou le mot de passe</p>
+        <p id="error-message">Erreur dans l’identifiant ou le mot de passe</p>
         <form id="login-form">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
-            
+            <input type="email" name="email" id="email" autocomplete="username" required>
+
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
-            
+            <input type="password" name="password" id="password" autocomplete="current-password" required>
+
             <input type="submit" value="Se connecter">
         </form>
-        <a href="#" id="forgot-password" style="display: block; text-align: center; color: #3D3D3D; text-decoration: underline;">Mot de passe oublié</a>
+        <a href="#" id="forgot-password">Mot de passe oublié</a>
     </section>
 </main>
 
 <footer>
-    <nav>
+    <nav aria-label="Pied de page">
         <ul>
             <li>Mentions Légales</li>
         </ul>
